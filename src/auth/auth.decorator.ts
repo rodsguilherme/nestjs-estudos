@@ -5,9 +5,12 @@ export const Auth = (...args: string[]) => SetMetadata('auth', args);
 
 export class CreateUserDto {
   @IsNotEmpty()
-  username: string;
+  name: string;
 
   @IsNotEmpty()
   @IsEmail()
   email: string;
+
+  @IsNotEmpty()
+  password: string;
 }
